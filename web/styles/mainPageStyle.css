@@ -1,17 +1,52 @@
 ul {
-  list-style: none; /*убираем маркеры списка*/
-  margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+  list-style: none;                     /*убираем маркеры списка*/
+  margin: 0;                            /*убираем верхнее и нижнее поле, равное 1em*/
   font-size:9px;
   padding: 1em 0;
 }
 
-li { display: inline;
+li {
+    display: inline;
      float: right;
      padding:8px 16px;
      border-bottom:2px solid black;
 }
 
 body{
-    background-image: url("images/mainImage.jpg"); /* Путь к фоновому изображению */
-    background-attachment: scroll; /* Фиксируем фон веб-страницы */
+    background-image: url("images/mainImage.jpg");          /* Путь к фоновому изображению */
+    background-attachment: scroll;                          /* Фон веб-страницы можно скролить*/
 }
+
+.dropbtn {
+    color: black;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    padding:0;
+    margin:0;
+    background-color:transparent;                     /* Задать прозрачный фон*/
+    text-decoration: underline;                       /* Задать подчеркивание текста*/
+    outline: none;
+}
+
+
+
+.dropdown-content {
+    display: none;                                  /* Задать появление dropdown*/
+    position: absolute;                             /* Задать появление dropdown*/
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;               /* Задать цвет шрифта*/
+    padding: 7px;               /* Задать отступы от надписи*/
+    text-decoration: none;      /* Задать подчеркивание надписи*/
+    display: block;             /* Задать отображение dropdown*/
+    background-color: white;    /* Задать цвет фона*/
+    border: 2px solid black;    /* Задать толщину и цвет границы dropdown*/
+    border-radius: 10px;        /* Задать радиус округления границы*/
+}
+
+.show {display: block;}

@@ -4,14 +4,26 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" type="text/css" href="styles/mainPageStyle.css">
   <link rel="SHORTCUT ICON" href="styles/images/siteIcon.png" type="image/x-icon">
+
+  <script src="./scripts/mainPage.js"></script>
   <meta charset="utf-8">
   <title>Морской бой</title>
 </head>
+
 <body>
 <ul>
-  <li class="w3-large"><a href="">Menu</a></li>
-  <li class="w3-large"><a href="">Information</a></li>
-  <li class="w3-large"><a href="">Home</a></li>
+  <li class="w3-large"><a href="">Информация</a></li>
+  <li class="w3-large">
+    <div>
+      <button onclick="myFunction()" class="dropbtn">Игры</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="">Морской бой</a>
+          <a href="">Бык и корова</a>
+          <a href="">Крокодил</a>
+        </div>
+    </div>
+  </li>
+  <li class="w3-large"><a href="">Главная</a></li>
 </ul>
 </body>
 </html>
