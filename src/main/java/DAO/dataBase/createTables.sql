@@ -9,13 +9,14 @@ ALTER SEQUENCE public.user
 CREATE TABLE public."User"
 (
     "idUser" numeric(10,0) NOT NULL DEFAULT nextval('user'::regclass),
+    "loginUser" character(30) COLLATE pg_catalog."default" NOT NULL,
     "firstNameUser" character(30) COLLATE pg_catalog."default" NOT NULL,
     "secondNameUser" character(30) COLLATE pg_catalog."default" NOT NULL,
     "ageUser" numeric(3,0),
     "countryUser" character(30) COLLATE pg_catalog."default",
     "winUser" numeric(20,0) NOT NULL,
     "loseUser" numeric(20,0) NOT NULL,
-    CONSTRAINT "User_pkey" PRIMARY KEY ("idUser")
+    CONSTRAINT "User_pkey" PRIMARY KEY ("idUser", "loginUser")
 )
 
     TABLESPACE pg_default;
