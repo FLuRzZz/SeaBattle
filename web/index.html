@@ -30,38 +30,64 @@
     <h2 class="w3-center"><img style="width:30%; height:30%" class="w3-circle w3-margin-top" src="styles/images/alexGamesImage.jpg" alt="Иконка" height=509 width="509"></h2>
 
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Registration')" id = "defaultOpen">Регистрация</button>
-        <button class="tablinks" onclick="openTab(event, 'Authorization')">Авторизация</button>
+        <button class="tabLinks" onclick="openTab(event, 'Registration')" id = "defaultOpen">Регистрация</button>
+        <button class="tabLinks" onclick="openTab(event, 'Authorization')">Авторизация</button>
     </div>
 
     <div id="Registration" class="tabcontent">
         <div class="w3-row w3-section">
             <div class="w3-rest">
-                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите логин" required>
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="text" required placeholder="Введите логин">
+                </label>
             </div>
         </div>
 
         <div class="w3-row w3-section">
             <div class="w3-rest">
-                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите имя" required>
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="password" required placeholder="Введите пароль">
+                </label>
             </div>
         </div>
 
         <div class="w3-row w3-section">
             <div class="w3-rest">
-                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите фамилию" required>
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="password" required placeholder="Введите пароль повторно">
+                </label>
             </div>
         </div>
 
         <div class="w3-row w3-section">
             <div class="w3-rest">
-                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите возраст">
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="text" required placeholder="Введите имя">
+                </label>
             </div>
         </div>
 
         <div class="w3-row w3-section">
             <div class="w3-rest">
-                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите страну">
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="text" required placeholder="Введите фамилию">
+                </label>
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите возраст">
+                </label>
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите страну">
+                </label>
             </div>
         </div>
     </div>
@@ -69,13 +95,17 @@
     <div id="Authorization" class="tabcontent">
         <div class="w3-row w3-section">
             <div class="w3-rest">
-                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите логин" required>
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="text" required placeholder="Введите логин">
+                </label>
             </div>
         </div>
 
         <div class="w3-row w3-section">
             <div class="w3-rest">
-                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите пароль" required>
+                <label>
+                    <input class="w3-input w3-border myRegInput" type="password" required placeholder="Введите пароль">
+                </label>
             </div>
         </div>
     </div>
