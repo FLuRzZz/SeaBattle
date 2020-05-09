@@ -1,65 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" type="text/css" href="styles/mainPageStyle.css">
-  <link rel="SHORTCUT ICON" href="styles/images/siteIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="styles/mainPageStyle.css">
+    <link rel="SHORTCUT ICON" href="styles/images/siteIcon.png" type="image/x-icon">
 
-  <script src="./scripts/mainPage.js"></script>
-  <meta charset="utf-8">
-  <title>Морской бой</title>
+    <script src="./scripts/mainPage.js"></script>
+    <meta charset="utf-8">
+    <title>Морской бой</title>
 </head>
 
 <body>
 <ul>
-  <li class="w3-large"><a href="">Информация</a></li>
-  <li class="w3-large">
-    <div>
-      <button onclick="myFunction()" class="dropbtn">Игры</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="">Морской бой</a>
-          <a href="">Бык и корова</a>
-          <a href="">Крокодил</a>
+    <li class="w3-large"><a href="">Информация</a></li>
+    <li class="w3-large">
+        <div>
+            <button onclick="myFunction()" class="dropbtn">Игры</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="">Морской бой</a>
+                <a href="">Бык и корова</a>
+                <a href="">Крокодил</a>
+            </div>
         </div>
-    </div>
-  </li>
-  <li class="w3-large"><a href="">Главная</a></li>
+    </li>
+    <li class="w3-large"><a href="">Главная</a></li>
 </ul>
 
 <form class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin myRegForm">
-  <h2 class="w3-center">Contact Us</h2>
+    <h2 class="w3-center"><img style="width:30%; height:30%" class="w3-circle w3-margin-top" src="styles/images/alexGamesImage.jpg" alt="Иконка" height=509 width="509"></h2>
 
-  <div class="w3-row w3-section">
-    <div class="w3-rest">
-      <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите логин" required>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Registration')" id = "defaultOpen">Регистрация</button>
+        <button class="tablinks" onclick="openTab(event, 'Authorization')">Авторизация</button>
     </div>
-  </div>
 
-  <div class="w3-row w3-section">
-    <div class="w3-rest">
-      <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите имя" required>
+    <div id="Registration" class="tabcontent">
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите логин" required>
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите имя" required>
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите фамилию" required>
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите возраст">
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите страну">
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="w3-row w3-section">
-    <div class="w3-rest">
-      <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите фамилию" required>
+    <div id="Authorization" class="tabcontent">
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите логин" required>
+            </div>
+        </div>
+
+        <div class="w3-row w3-section">
+            <div class="w3-rest">
+                <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите пароль" required>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="w3-row w3-section">
-    <div class="w3-rest">
-      <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите возраст">
-    </div>
-  </div>
-
-  <div class="w3-row w3-section">
-    <div class="w3-rest">
-      <input class="w3-input w3-border myRegInput" type="text" placeholder="Введите страну">
-    </div>
-  </div>
-
-  <button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding">Send</button>
+    <button class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding">Send</button>
 </form>
 
 </body>

@@ -10,6 +10,7 @@ CREATE TABLE public."User"
 (
     "idUser" numeric(10,0) NOT NULL DEFAULT nextval('user'::regclass),
     "loginUser" character(30) COLLATE pg_catalog."default" NOT NULL,
+    "passwordUser" character(30) COLLATE pg_catalog."default" NOT NULL,
     "firstNameUser" character(30) COLLATE pg_catalog."default" NOT NULL,
     "secondNameUser" character(30) COLLATE pg_catalog."default" NOT NULL,
     "ageUser" numeric(3,0),

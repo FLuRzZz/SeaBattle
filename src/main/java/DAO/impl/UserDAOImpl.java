@@ -21,6 +21,7 @@ public class UserDAOImpl implements UserDAO {
                 list.add(new User(
                         resultSet.getInt(User.ID_USER_COLUMN),
                         resultSet.getString(User.LOGIN_USER_COLUMN),
+                        resultSet.getString(User.PASSWORD_USER_COLUMN),
                         resultSet.getString(User.FIRST_NAME_USER_COLUMN),
                         resultSet.getString(User.SECOND_NAME_USER_COLUMN),
                         resultSet.getInt(User.AGE_USER_COLUMN),
@@ -44,6 +45,7 @@ public class UserDAOImpl implements UserDAO {
             return new User(
                     resultSet.getInt(User.ID_USER_COLUMN),
                     resultSet.getString(User.LOGIN_USER_COLUMN),
+                    resultSet.getString(User.PASSWORD_USER_COLUMN),
                     resultSet.getString(User.FIRST_NAME_USER_COLUMN),
                     resultSet.getString(User.SECOND_NAME_USER_COLUMN),
                     resultSet.getInt(User.AGE_USER_COLUMN),
@@ -60,12 +62,13 @@ public class UserDAOImpl implements UserDAO {
             PreparedStatement preparedStatement =
                     connection.prepareStatement(SQL_INSERT_USER);
             preparedStatement.setString(1, user.getLoginUser());
-            preparedStatement.setString(2, user.getFirstNameUser());
-            preparedStatement.setString(3, user.getSecondNameUser());
-            preparedStatement.setInt(4, user.getAgeUser());
-            preparedStatement.setString(5, user.getCountryUser());
-            preparedStatement.setInt(6, user.getWinUser());
-            preparedStatement.setInt(7, user.getLoseUser());
+            preparedStatement.setString(2, user.getPasswordUser());
+            preparedStatement.setString(3, user.getFirstNameUser());
+            preparedStatement.setString(4, user.getSecondNameUser());
+            preparedStatement.setInt(5, user.getAgeUser());
+            preparedStatement.setString(6, user.getCountryUser());
+            preparedStatement.setInt(7, user.getWinUser());
+            preparedStatement.setInt(8, user.getLoseUser());
             preparedStatement.executeUpdate();
         } catch (SQLException ignored) {
         }
@@ -76,13 +79,14 @@ public class UserDAOImpl implements UserDAO {
             PreparedStatement preparedStatement =
                     connection.prepareStatement(SQL_UPDATE_USER);
             preparedStatement.setString(1, user.getLoginUser());
-            preparedStatement.setString(2, user.getFirstNameUser());
-            preparedStatement.setString(3, user.getSecondNameUser());
-            preparedStatement.setInt(4, user.getAgeUser());
-            preparedStatement.setString(5, user.getCountryUser());
-            preparedStatement.setInt(6, user.getWinUser());
-            preparedStatement.setInt(7, user.getLoseUser());
-            preparedStatement.setInt(8, idUser);
+            preparedStatement.setString(2, user.getPasswordUser());
+            preparedStatement.setString(3, user.getFirstNameUser());
+            preparedStatement.setString(4, user.getSecondNameUser());
+            preparedStatement.setInt(5, user.getAgeUser());
+            preparedStatement.setString(6, user.getCountryUser());
+            preparedStatement.setInt(7, user.getWinUser());
+            preparedStatement.setInt(8, user.getLoseUser());
+            preparedStatement.setInt(9, idUser);
             preparedStatement.executeUpdate();
         } catch (SQLException ignored) {
         }

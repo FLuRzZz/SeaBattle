@@ -3,6 +3,7 @@ package model;
 public class User {
     public static final String ID_USER_COLUMN = "idUser";
     public static final String LOGIN_USER_COLUMN = "loginUser";
+    public static final String PASSWORD_USER_COLUMN = "passwordUser";
     public static final String FIRST_NAME_USER_COLUMN = "firstNameUser";
     public static final String SECOND_NAME_USER_COLUMN = "secondNameUser";
     public static final String AGE_USER_COLUMN = "ageUser";
@@ -12,6 +13,7 @@ public class User {
 
     private int idUser;
     private String loginUser;
+    private String passwordUser;
     private String firstNameUser;
     private String secondNameUser;
     private int ageUser;
@@ -22,9 +24,10 @@ public class User {
     public User(){
     }
 
-    public User(int idUser, String loginUser, String firstNameUser, String secondNameUser, int ageUser, String countryUser, int winUser, int loseUser){
+    public User(int idUser, String loginUser, String passwordUser, String firstNameUser, String secondNameUser, int ageUser, String countryUser, int winUser, int loseUser){
         this.idUser = idUser;
         this.loginUser = loginUser;
+        this.passwordUser = passwordUser;
         this.firstNameUser = firstNameUser;
         this.secondNameUser = secondNameUser;
         this.ageUser = ageUser;
@@ -33,8 +36,9 @@ public class User {
         this.loseUser = loseUser;
     }
 
-    public User(String loginUser, String firstNameUser, String secondNameUser, int ageUser, String countryUser, int winUser, int loseUser){
+    public User(String loginUser, String firstNameUser, String passwordUser, String secondNameUser, int ageUser, String countryUser, int winUser, int loseUser){
         this.loginUser = loginUser;
+        this.passwordUser = passwordUser;
         this.firstNameUser = firstNameUser;
         this.secondNameUser = secondNameUser;
         this.ageUser = ageUser;
@@ -46,6 +50,8 @@ public class User {
     public int getIdUser() { return idUser; }
 
     public String getLoginUser() { return loginUser; }
+
+    public String getPasswordUser() { return passwordUser; }
 
     public String getFirstNameUser() { return firstNameUser; }
 
@@ -60,6 +66,8 @@ public class User {
     public int getLoseUser() { return loseUser; }
 
     public void setLoginUser(String loginUser) { this.loginUser = loginUser; }
+
+    public void setPasswordUser(String passwordUser) { this.passwordUser = passwordUser; }
 
     public void setFirstNameUser(String firstNameUser) { this.firstNameUser = firstNameUser; }
 
@@ -77,6 +85,7 @@ public class User {
     public String toString() {
         String sb = "User{" + "idUser=" + idUser +
                 ", loginUser=" + loginUser +
+                ", passwordUser=" + passwordUser +
                 ", firstNameUser=" + firstNameUser +
                 ", secondNameUser=" + secondNameUser +
                 ", ageUser=" + ageUser +
